@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog database v. 1.0</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./dogs.js"></script>
+</head>
+<body>
+  <h1 class="title">Dog database</h1>
+  <section class="management">
+    <section class="dog-data">
+      <input type="text" name="dogname" id="dogname" placeholder="Enter name"/>
+      <br>
+      <input type="text" name="breed" id="breed" placeholder="Enter breed"/>
+      <br>
+      <input type="text" name="sex" id="sex" placeholder="Dog/bitch"/>
+      <br>
+      <input type="text" name="year" id="year" placeholder="Date of birth"/>
+      <br>
+    </section>
+    <section class="actions">
+      <button id="addDog" class="task" onclick="addDog()">Add dog</button>
+      <button id="displayDogs" class="task" onclick="displayDogs()">Show dogs</button>
+      <section class="delete-dog">
+        <input type="number" name="id" id="id" placeholder="id" />
+        <button id="deleteDog" class="task" onclick="deleteDog()">Remove dog</button>
+      </section> 
+    </section>
+  </section>
+  <section class="dog-list" id="dog-list"></section>
+</body>
+</html>
