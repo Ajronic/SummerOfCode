@@ -1,17 +1,18 @@
-const title = document.getElementById('title');
-const author = document.getElementById('author');
-const year = document.getElementById('year');
-const addButton = document.getElementById('addButton');
-const removeButton = document.getElementById('removeButton');
-const division = document.getElementById('division');
+let title = document.getElementById('title');
+let author = document.getElementById('author');
+let year = document.getElementById('year');
+  const addButton = document.getElementById('addButton');
+  const removeButton = document.getElementById('removeButton');
+  const division = document.getElementById('division');
 
 
   addButton.addEventListener('click', function() {
-    const text = title.value;
+    let text = title.value +" " + author.value + " " + year.value;
 
-    if (title) {
+    // Check if the input is not empty
+    if (text) {
       const divItem = document.createElement('p');
-      divItem.textContent = title + author + year;
+      divItem.textContent = text;
 
       divItem.addEventListener('mouseover', function() {
         divItem.style.backgroundColor = 'lightgrey';
@@ -29,7 +30,6 @@ const division = document.getElementById('division');
       title.value = '';
       author.value = '';
       year.value = '';
-
     }
   });
 
